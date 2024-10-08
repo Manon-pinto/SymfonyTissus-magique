@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Tissu Magique{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <img src="{{ asset('images/placeholder-logo.png') }}" alt="Tissu Magique" class="logo">
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer class="footer">
+            Informations de contact + Adresse du magasin + Horaires d'ouvertures et de fermetures
+        </footer>
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

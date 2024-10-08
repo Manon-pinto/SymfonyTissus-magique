@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    body {
+        background-color: #F4FAFB;
+        color: #3C425A;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .nav {
+        background-color: #3C425A;
+        padding: 10px 0;
+    }
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav ul li {
+        margin: 0 15px;
+    }
+    .nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    .nav ul li a.active {
+        color: #CD613F;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+    }
+    .swiper-slide {
+        background-color: #335F8A;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+    .products {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .product {
+        background-color: #335F8A;
+        color: white;
+        width: 30%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2 {
+        color: #3C425A;
+    }
+    .footer {
+        background-color: #3C425A;
+        color: #CD613F;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<nav class="nav">
+    <ul>
+        <li><a href="{{ path('app_home') }}" class="active">Accueil</a></li>
+        <li><a href="{{ path('app_products') }}">Produits</a></li>
+        <li><a href="{{ path('app_customization') }}">Personnalisation</a></li>
+        <li><a href="{{ path('app_about') }}">À propos</a></li>
+        <li><a href="{{ path('app_contact') }}">Contact</a></li>
+        <li><a href="{{ path('app_login') }}">Connexion</a></li>
+        <li><a href="#">🛒</a></li>
+    </ul>
+</nav>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<h2>Nouveautés</h2>
+<div class="products">
+    <div class="product">Produit 1</div>
+    <div class="product">Produit 2</div>
+    <div class="product">Produit 3</div>
+</div>
+
+<h2>Coups de coeur</h2>
+<div class="products">
+    <div class="product">Produit 1</div>
+    <div class="product">Produit 2</div>
+    <div class="product">Produit 3</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+{% endblock %}

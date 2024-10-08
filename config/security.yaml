@@ -1,0 +1,12 @@
+security:
+    firewalls:
+        main:
+            anonymous: true
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                csrf_token_generator: security.csrf.token_manager
+
+    access_control:
+        - { path: ^/connexion$, roles: ROLE_USERS }
+        - { path: ^/home, roles: ROLE_USER }
