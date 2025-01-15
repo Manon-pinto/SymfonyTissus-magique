@@ -93,32 +93,62 @@ h2 {
 
 
                                         /*-------------VIGNETTES CREATIONS-------------*/
-.card{
-    /*height: 100%;*/
+.card {
     display: flex;
     flex-direction: column;
-    margin:2%;
+    margin: 2%;
     text-align: center;
     border: 2px solid #3C425A !important;
 }
-                                        
-/*.card img{
-    height: 300px;
-}*/
-                                        
+                                                                            
 .card-body {
-    background-color:#85a7c8;
+    background-color: #85a7c8;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
                                         
-.card .btn{
-    background-color:#3C425A;
-    border-color:#3C425A;
+.card-body .d-flex {
+    margin-top: auto;
+    justify-content: center;
+    gap: 0.5rem !important;
 }
-
-.card .btn:hover{
+                                        
+/* Style commun pour tous les boutons */
+.card .btn {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+                                        
+/* Style spécifique pour chaque bouton */
+.card .btn-primary {
+    background-color: #3C425A;
+    border-color: #3C425A;
+}
+                                        
+.card .btn-warning {
+    background-color: #3C425A;
+    border-color: #3C425A;
+}
+                                        
+.card .btn-danger {
+    background-color: #3C425A;
+    border-color: #3C425A;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+                                        
+/* Hover effects */
+.card .btn:hover {
     background-color: #CD613F;
     border-color: #CD613F;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* CONTACT */

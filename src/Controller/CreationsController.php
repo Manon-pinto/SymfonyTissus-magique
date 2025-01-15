@@ -10,6 +10,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
+use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use Symfony\Component\Security\Csrf\CsrfToken;
 
 #[Route('/creations')]
 class CreationsController extends AbstractController
@@ -94,14 +97,19 @@ class CreationsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_creations_delete', methods: ['POST'])]
-    public function delete(Request $request, Creations $creation, EntityManagerInterface $entityManager): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$creation->getId(), $request->request->get('_token'))) {
-            $entityManager->remove($creation);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('app_creations_index', [], Response::HTTP_SEE_OTHER);
+    #[Route('/creations/{id}/delete', name: 'app_delete_art', methods: ['POST'])]
+public function delete(Request $request, Creations $creation, EntityManagerInterface $entityManager, CsrfTokenManagerInterface $csrfTokenManager): Response
+{
+    $token = $request->request->get('_token');
+    if (!$csrfTokenManager->isTokenValid(new CsrfToken('delete'.$creation->getId(), $token))) {
+        throw new InvalidCsrfTokenException('Token CSRF invalide');
     }
+
+    $entityManager->remove($creation);
+    $entityManager->flush();
+
+    $this->addFlash('success', 'La création a été supprimée avec succès.');
+
+    return $this->redirectToRoute('app_creations');
+}
 }

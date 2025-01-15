@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
          {% block details_css %}{% endblock %}
@@ -23,11 +24,11 @@
         <nav class="nav">
         <div class="container">
             <ul>
-                <li><a href="{{ path('app_home') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Accueil</a></li>
+                <li><a href="{{ path('app_home') }}" {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>Accueil</a></li>
                 <li><a href="{{ path('app_creations') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Créations</a></li>
                 <li><a href="{{ path('app_about') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>À propos</a></li>
                 <li><a href="{{ path('app_contact') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Contact</a></li>
-                <li><a href="{{ path('app_login') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Connexion</a></li>
+                <li><a href="{{ path('app_login') }}" {% if app.request.get('_route') == 'app_login' %}class="active"{% endif %}>Connexion</a></li>
             </ul>
         </div>
         </nav>
