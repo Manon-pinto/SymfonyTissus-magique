@@ -5,17 +5,43 @@
         <title>{% block title %}Tissu Magique{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        <header class="header">
-            <img src="{{ asset('images/placeholder-logo.png') }}" alt="Tissu Magique" class="logo">
-        </header>
+
+
 
         {% block body %}{% endblock %}
 
-        <footer class="footer">
-            Informations de contact + Adresse du magasin + Horaires d'ouvertures et de fermetures
-        </footer>
-        
+<footer class="footer" style="background-color: #CD613F; color: white; padding: 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <!-- Logo ou nom du site -->
+        <div style="flex: 1; text-align: left; margin-bottom: 10px;">
+            <p style="margin: 0; font-weight: bold; font-size: 1.2em;">&copy; 2024 Tissu Magique</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;">Des créations uniques avec passion et précision.</p>
+        </div>
+
+        <!-- Informations pratiques -->
+        <div style="flex: 1; text-align: center; margin-bottom: 10px;">
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Adresse :</strong> 123 Rue de la Couture, 75001 Paris, France</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Horaires :</strong> Lundi - Vendredi : 9h00 - 18h00</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Téléphone :</strong> <a href="tel:+33123456789" style="text-decoration: none; color: white;">01 23 45 67 89</a></p>
+        </div>
+
+        <!-- Navigation footer -->
+        <div style="flex: 1; text-align: right; margin-bottom: 10px;">
+            <ul style="list-style: none; margin: 0; padding: 0; display: inline-flex; gap: 15px;">
+                <li>
+                    <a href="mentions-legales.php" style="text-decoration: none; color: white; font-size: 0.9em;">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="politique-confidentialité.php" style="text-decoration: none; color: white; font-size: 0.9em;">Politique de confidentialité</a>
+                </li>
+                <li>
+                    <a href="CGV.php" style="text-decoration: none; color: white; font-size: 0.9em;">Conditions générales de vente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,4 +1,13 @@
 {
+    "doctrine/annotations": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.10",
+            "ref": "64d8583af5ea57b7afa4aba4b159907f3a148b05"
+        }
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.13",
         "recipe": {
@@ -69,11 +78,12 @@
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "1.0",
-            "ref": "146251ae39e06a95be0fe3d13c807bcf3938b172"
+            "version": "2.4",
+            "ref": "52e9754527a15e2b79d9a610f98185a1fe46622a"
         },
         "files": [
-            "./.env"
+            "./.env",
+            "./.env.dev"
         ]
     },
     "symfony/framework-bundle": {
@@ -101,7 +111,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "4.3",
-            "ref": "df66ee1f226c46f01e85c29c2f7acce0596ba35a"
+            "ref": "09051cfde49476e3c12cd3a0e44289ace1c75a4f"
         },
         "files": [
             "./config/packages/mailer.yaml"
@@ -153,7 +163,7 @@
         ]
     },
     "symfony/phpunit-bridge": {
-        "version": "7.1",
+        "version": "7.2",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",

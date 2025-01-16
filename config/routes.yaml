@@ -24,4 +24,9 @@ app_contact:
 
 app_login:
     path: /connexion
-    controller: App\Controller\RegistrationController::login
+    controller: App\Controller\SecurityController::login
+
+app_dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::dashboard
+    methods: [GET]
