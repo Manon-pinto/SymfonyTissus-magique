@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RegistrationController extends AbstractController
 {
-    #[Route('/connexion', name: 'app_register')]
+    #[Route('/connexion', name: 'app_login')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
     {
         // Vérifier si l'utilisateur est admin

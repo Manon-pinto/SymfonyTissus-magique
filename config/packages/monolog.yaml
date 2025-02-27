@@ -1,6 +1,10 @@
 monolog:
-    channels:
-        - deprecation # Deprecations are logged in the dedicated "deprecation" channel when it exists
+    channels: ["deprecation"]
+    handlers:
+        main:
+            type: stream
+            path: "php://stdout"
+            level: error
 
 when@dev:
     monolog:

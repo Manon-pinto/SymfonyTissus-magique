@@ -2,21 +2,13 @@
 
 {% block stylesheets %}
 {{ parent() }}
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
 <style>
-    body {
-        background-color: #F4FAFB;
-        color: #3C425A;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    .header {
-        background-color: white;
-        padding: 10px 0;
-        text-align: center;
-    }
-    .nav {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4FAFB;
+        }
+        .nav {
         background-color: #3C425A;
         padding: 10px 0;
     }
@@ -38,84 +30,123 @@
     .nav ul li a.active {
         color: #CD613F;
     }
-    .swiper-container {
-        width: 100%;
-        height: 300px;
-    }
-    .swiper-slide {
-        background-color: #335F8A;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-    }
-    .products {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0;
-    }
-    .product {
-        background-color: #335F8A;
-        color: white;
-        width: 30%;
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-container img {
+            max-width: 150px;
+        }
     h2 {
-        color: #3C425A;
-    }
-    .footer {
-        background-color: #3C425A;
-        color: #CD613F;
-        padding: 20px;
         text-align: center;
+        color: #FF6600; /* Orange vif */
+        margin-bottom: 20px;
     }
+    .card {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-title {
+        color: #3C425A;
+        font-size: 18px;
+    }
+    .content {
+        margin: 40px 0;
+    }
+
 </style>
 {% endblock %}
 
 {% block body %}
 
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+<!-- Nouveautés Section -->
+<div class="container">
+    <div id="nouveautes" class="content">
+        <h2><strong>Nouveautés</strong></h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Robe.jpeg') }}" class="card-img-top" alt="Robe années 50">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Robe années 50</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/veste.jpeg') }}" class="card-img-top" alt="Veste côtelée">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Veste côtelée</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Veste_epaisse.jpeg') }}" class="card-img-top" alt="Veste d'hiver">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Veste d'hiver</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Robe_enfant.jpeg') }}" class="card-img-top" alt="Robe enfant">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Robe enfant</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+
+    <!-- Coups de cœur Section -->
+    <div id="coeur" class="content">
+        <h2><strong>Coups de cœur</strong></h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Robe.jpeg') }}" class="card-img-top" alt="Robe années 50">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Robe années 50</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Veste.jpeg') }}" class="card-img-top" alt="Veste côtelée">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Veste côtelée</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Bob.jpeg') }}" class="card-img-top" alt="Bob rose">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Bob rose</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/creations/Sac.jpeg') }}" class="card-img-top" alt="Sac à main">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sac à main</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Nouveautés</h2>
-<div class="products">
-    <div class="product">Produit 1</div>
-    <div class="product">Produit 2</div>
-    <div class="product">Produit 3</div>
-</div>
-
-<h2>Coups de coeur</h2>
-<div class="products">
-    <div class="product">Produit 1</div>
-    <div class="product">Produit 2</div>
-    <div class="product">Produit 3</div>
-</div>
 {% endblock %}
 
 {% block javascripts %}
 {{ parent() }}
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock %}

@@ -22,24 +22,56 @@
         </header>
 
         <nav class="nav">
-        <div class="container">
-            <ul>
-                <li><a href="{{ path('app_home') }}" {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>Accueil</a></li>
-                <li><a href="{{ path('app_creations') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Créations</a></li>
-                <li><a href="{{ path('app_about') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>À propos</a></li>
-                <li><a href="{{ path('app_contact') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Contact</a></li>
+    <div class="container">
+        <ul>
+            <li><a href="{{ path('app_home') }}" {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>Accueil</a></li>
+            <li><a href="{{ path('app_creations') }}" {% if app.request.get('_route') == 'app_creations' %}class="active"{% endif %}>Créations</a></li>
+            <li><a href="{{ path('app_about') }}" {% if app.request.get('_route') == 'app_about' %}class="active"{% endif %}>À propos</a></li>
+            <li><a href="{{ path('app_contact') }}" {% if app.request.get('_route') == 'app_contact' %}class="active"{% endif %}>Contact</a></li>
+            {% if app.user %}
+                <li><a href="{{ path('app_logout') }}" class="nav-logout">Déconnexion</a></li>
+            {% else %}
                 <li><a href="{{ path('app_login') }}" {% if app.request.get('_route') == 'app_login' %}class="active"{% endif %}>Connexion</a></li>
-            </ul>
-        </div>
-        </nav>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
 
         <main>
             {% block body %}{% endblock %}
         </main>
 
-        <footer class="footer mt-auto">
-            Contact au 07 69 76 21 31 et à contact@tissu-magique.fr ; 9 chemin de traverse, 33000 Bordeaux , magasin ouvert de 8h à 18h du Lundi au Samedi
-        </footer>
+        <footer class="footer" style="background-color: #CD613F; color: white; padding: 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <!-- Logo ou nom du site -->
+        <div style="flex: 1; text-align: left; margin-bottom: 10px;">
+            <p style="margin: 0; font-weight: bold; font-size: 1.2em;">&copy; 2024 Tissu Magique</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;">Des créations uniques avec passion et précision.</p>
+        </div>
+
+        <!-- Informations pratiques -->
+        <div style="flex: 1; text-align: center; margin-bottom: 10px;">
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Adresse :</strong> 123 Rue de la Couture, 75001 Paris, France</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Horaires :</strong> Lundi - Vendredi : 9h00 - 18h00</p>
+            <p style="margin: 0; font-size: 0.9em; color: white;"><strong>Téléphone :</strong> <a href="tel:+33123456789" style="text-decoration: none; color: white;">01 23 45 67 89</a></p>
+        </div>
+
+        <!-- Navigation footer -->
+        <div style="flex: 1; text-align: right; margin-bottom: 10px;">
+            <ul style="list-style: none; margin: 0; padding: 0; display: inline-flex; gap: 15px;">
+                <li>
+                    <a href="mentions-legales.php" style="text-decoration: none; color: white; font-size: 0.9em;">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="politique-confidentialité.php" style="text-decoration: none; color: white; font-size: 0.9em;">Politique de confidentialité</a>
+                </li>
+                <li>
+                    <a href="CGV.php" style="text-decoration: none; color: white; font-size: 0.9em;">Conditions générales de vente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CreationsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CreationsRepository::class)]
@@ -27,6 +29,17 @@ class Creations
 
     #[ORM\Column]
     private ?int $Prix = null;
+
+    /**
+     * @var Collection<int, PersonnalisationCreation>
+     */
+    #[ORM\OneToMany(mappedBy: 'creation', targetEntity: PersonnalisationCreation::class)]
+    private Collection $personnalisationCreations;
+
+    public function __construct()
+    {
+        $this->personnalisationCreations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -89,6 +102,36 @@ class Creations
     public function setPrix(int $Prix): static
     {
         $this->Prix = $Prix;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PersonnalisationCreation>
+     */
+    public function getPersonnalisationCreations(): Collection
+    {
+        return $this->personnalisationCreations;
+    }
+
+    public function addPersonnalisationCreation(PersonnalisationCreation $personnalisationCreation): static
+    {
+        if (!$this->personnalisationCreations->contains($personnalisationCreation)) {
+            $this->personnalisationCreations->add($personnalisationCreation);
+            $personnalisationCreation->setCreation($this);
+        }
+
+        return $this;
+    }
+
+    public function removePersonnalisationCreation(PersonnalisationCreation $personnalisationCreation): static
+    {
+        if ($this->personnalisationCreations->removeElement($personnalisationCreation)) {
+            // set the owning side to null (unless already changed)
+            if ($personnalisationCreation->getCreation() === $this) {
+                $personnalisationCreation->setCreation(null);
+            }
+        }
 
         return $this;
     }
