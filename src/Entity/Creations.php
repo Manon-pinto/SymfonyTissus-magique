@@ -30,6 +30,12 @@ class Creations
     #[ORM\Column]
     private ?int $Prix = null;
 
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $publicCible = null;
+
+    #[ORM\Column(length: 100, nullable: true)]
+    private ?string $categorie = null;
+
     /**
      * @var Collection<int, PersonnalisationCreation>
      */
@@ -54,7 +60,6 @@ class Creations
     public function setImagePath(?string $imagePath): static
     {
         $this->imagePath = $imagePath;
-
         return $this;
     }
 
@@ -66,7 +71,6 @@ class Creations
     public function setNom(string $Nom): static
     {
         $this->Nom = $Nom;
-
         return $this;
     }
 
@@ -78,7 +82,6 @@ class Creations
     public function setTaille(int $Taille): static
     {
         $this->Taille = $Taille;
-
         return $this;
     }
 
@@ -90,7 +93,6 @@ class Creations
     public function setDescription(?string $Description): static
     {
         $this->Description = $Description;
-
         return $this;
     }
 
@@ -102,7 +104,28 @@ class Creations
     public function setPrix(int $Prix): static
     {
         $this->Prix = $Prix;
+        return $this;
+    }
 
+    public function getPublicCible(): ?string
+    {
+        return $this->publicCible;
+    }
+
+    public function setPublicCible(?string $publicCible): static
+    {
+        $this->publicCible = $publicCible;
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?string $categorie): static
+    {
+        $this->categorie = $categorie;
         return $this;
     }
 

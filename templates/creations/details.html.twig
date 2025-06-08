@@ -11,7 +11,7 @@
         <div class="row creation-details">
             <div class="col-md-4 image-container">
                 {% if creation.imagePath %}
-                    <img id="imgdetails" src="{{ asset('uploads/creations/' ~ creation.ImagePath) }}" 
+                    <img id="imgdetails" src="{{ asset('uploads/images/' ~ creation.ImagePath) }}" 
                          alt="{{ creation.nom }}" 
                          class="img-fluid creation-image custom-margin shadow-effect rounded-effect zoom-effect frame-effect shine-effect">
                 {% else %}

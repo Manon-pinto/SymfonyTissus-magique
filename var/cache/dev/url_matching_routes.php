@@ -77,7 +77,7 @@ return [
         262 => [[['_route' => 'creation_details', '_controller' => 'App\\Controller\\CreationsController::details'], ['id'], null, null, false, true, null]],
         281 => [[['_route' => 'app_creations_show', '_controller' => 'App\\Controller\\CreationsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         297 => [[['_route' => 'app_creations_edit', '_controller' => 'App\\Controller\\CreationsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        311 => [[['_route' => 'app_delete_art', '_controller' => 'App\\Controller\\CreationsController::delete'], ['id'], ['POST' => 0], null, false, false, null]],
+        311 => [[['_route' => 'app_creations_delete', '_controller' => 'App\\Controller\\CreationsController::delete'], ['id'], ['POST' => 0], null, false, false, null]],
         340 => [
             [['_route' => 'app_edit_art', '_controller' => 'App\\Controller\\EditArtController::edit'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],

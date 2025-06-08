@@ -38,6 +38,8 @@ class EditArtController extends AbstractController
                 $formArt->setImageFileName($originalFilename);
     
                 $newFilename = $originalFilename;
+echo $newFilename;
+
                 try {
                     $imageFile->move(
                         $this->getParameter('images_directory'),

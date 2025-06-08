@@ -23,7 +23,7 @@ return [
     'app_creations_new' => [[], ['_controller' => 'App\\Controller\\CreationsController::new'], [], [['text', '/creations/new']], [], [], []],
     'app_creations_show' => [['id'], ['_controller' => 'App\\Controller\\CreationsController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/creations']], [], [], []],
     'app_creations_edit' => [['id'], ['_controller' => 'App\\Controller\\CreationsController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/creations']], [], [], []],
-    'app_delete_art' => [['id'], ['_controller' => 'App\\Controller\\CreationsController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/creations']], [], [], []],
+    'app_creations_delete' => [['id'], ['_controller' => 'App\\Controller\\CreationsController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/creations']], [], [], []],
     'app_edit_art' => [['id'], ['_controller' => 'App\\Controller\\EditArtController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit/art']], [], [], []],
     'home_redirect' => [[], ['_controller' => 'App\\Controller\\HomeController::redirectToHome'], [], [['text', '/']], [], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::home'], [], [['text', '/home']], [], [], []],

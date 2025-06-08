@@ -115,7 +115,7 @@ class __TwigTemplate_2a530a084b1680f2d41b158155854a19 extends Template
         if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["creation"]) || array_key_exists("creation", $context) ? $context["creation"] : (function () { throw new RuntimeError('Variable "creation" does not exist.', 13, $this->source); })()), "imagePath", [], "any", false, false, false, 13)) {
             // line 14
             yield "                    <img id=\"imgdetails\" src=\"";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/creations/" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["creation"]) || array_key_exists("creation", $context) ? $context["creation"] : (function () { throw new RuntimeError('Variable "creation" does not exist.', 14, $this->source); })()), "ImagePath", [], "any", false, false, false, 14))), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/images/" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["creation"]) || array_key_exists("creation", $context) ? $context["creation"] : (function () { throw new RuntimeError('Variable "creation" does not exist.', 14, $this->source); })()), "ImagePath", [], "any", false, false, false, 14))), "html", null, true);
             yield "\" 
                          alt=\"";
             // line 15
@@ -238,7 +238,7 @@ class __TwigTemplate_2a530a084b1680f2d41b158155854a19 extends Template
         <div class=\"row creation-details\">
             <div class=\"col-md-4 image-container\">
                 {% if creation.imagePath %}
-                    <img id=\"imgdetails\" src=\"{{ asset('uploads/creations/' ~ creation.ImagePath) }}\" 
+                    <img id=\"imgdetails\" src=\"{{ asset('uploads/images/' ~ creation.ImagePath) }}\" 
                          alt=\"{{ creation.nom }}\" 
                          class=\"img-fluid creation-image custom-margin shadow-effect rounded-effect zoom-effect frame-effect shine-effect\">
                 {% else %}

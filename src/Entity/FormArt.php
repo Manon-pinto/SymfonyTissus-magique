@@ -28,6 +28,12 @@ class FormArt
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image_path = null;
 
+    #[ORM\Column(length: 100, nullable: true)]
+    private ?string $categorie = null;
+
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $public_cible = null;
+
     private ?string $imageFileName = null;
 
     // Getters et Setters
@@ -99,6 +105,28 @@ class FormArt
     public function setImageFileName(?string $imageFileName): self
     {
         $this->imageFileName = $imageFileName;
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?string $categorie): self
+    {
+        $this->categorie = $categorie;
+        return $this;
+    }
+
+    public function getPublicCible(): ?string
+    {
+        return $this->public_cible;
+    }
+
+    public function setPublicCible(?string $public_cible): self
+    {
+        $this->public_cible = $public_cible;
         return $this;
     }
 }

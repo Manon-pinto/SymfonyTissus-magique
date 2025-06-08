@@ -169,10 +169,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 74
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Robe.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/jupe_enfant.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Robe années 50\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe années 50</h5>
+                        <h5 class=\"card-title text-center\">Jupe tutu enfant</h5>
                     </div>
                 </div>
             </div>
@@ -180,10 +180,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 82
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/veste.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/Sac.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Veste côtelée\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste côtelée</h5>
+                        <h5 class=\"card-title text-center\">Tote bag</h5>
                     </div>
                 </div>
             </div>
@@ -191,10 +191,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 90
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Veste_epaisse.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/Veste_epaisse.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Veste d'hiver\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste d'hiver</h5>
+                        <h5 class=\"card-title text-center\">Veste en laine rouge</h5>
                     </div>
                 </div>
             </div>
@@ -202,10 +202,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 98
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Robe_enfant.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/tee_homme.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Robe enfant\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe enfant</h5>
+                        <h5 class=\"card-title text-center\">Tee shirt basique homme</h5>
                     </div>
                 </div>
             </div>
@@ -220,10 +220,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 113
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Robe.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/robe_chambre_homme.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Robe années 50\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe années 50</h5>
+                        <h5 class=\"card-title text-center\">Robe de chambre homme</h5>
                     </div>
                 </div>
             </div>
@@ -231,10 +231,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 121
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Veste.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/Robe-enfant.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Veste côtelée\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste côtelée</h5>
+                        <h5 class=\"card-title text-center\">Robe pour enfant</h5>
                     </div>
                 </div>
             </div>
@@ -242,10 +242,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 129
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Bob.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/Veste.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Bob rose\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Bob rose</h5>
+                        <h5 class=\"card-title text-center\">Veste en laine coloré</h5>
                     </div>
                 </div>
             </div>
@@ -253,10 +253,10 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
                 <div class=\"card\">
                     <img src=\"";
         // line 137
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/creations/Sac.jpeg"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/tee_enfant.jpeg"), "html", null, true);
         yield "\" class=\"card-img-top\" alt=\"Sac à main\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Sac à main</h5>
+                        <h5 class=\"card-title text-center\">Tee shirt imprimé enfant</h5>
                     </div>
                 </div>
             </div>
@@ -400,33 +400,33 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
         <div class=\"row\">
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Robe.jpeg') }}\" class=\"card-img-top\" alt=\"Robe années 50\">
+                    <img src=\"{{ asset('uploads/images/jupe_enfant.jpeg') }}\" class=\"card-img-top\" alt=\"Robe années 50\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe années 50</h5>
+                        <h5 class=\"card-title text-center\">Jupe tutu enfant</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/veste.jpeg') }}\" class=\"card-img-top\" alt=\"Veste côtelée\">
+                    <img src=\"{{ asset('uploads/images/Sac.jpeg') }}\" class=\"card-img-top\" alt=\"Veste côtelée\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste côtelée</h5>
+                        <h5 class=\"card-title text-center\">Tote bag</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Veste_epaisse.jpeg') }}\" class=\"card-img-top\" alt=\"Veste d'hiver\">
+                    <img src=\"{{ asset('uploads/images/Veste_epaisse.jpeg') }}\" class=\"card-img-top\" alt=\"Veste d'hiver\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste d'hiver</h5>
+                        <h5 class=\"card-title text-center\">Veste en laine rouge</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Robe_enfant.jpeg') }}\" class=\"card-img-top\" alt=\"Robe enfant\">
+                    <img src=\"{{ asset('uploads/images/tee_homme.jpeg') }}\" class=\"card-img-top\" alt=\"Robe enfant\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe enfant</h5>
+                        <h5 class=\"card-title text-center\">Tee shirt basique homme</h5>
                     </div>
                 </div>
             </div>
@@ -439,33 +439,33 @@ class __TwigTemplate_551855e201d99dd27980f923efd1dbdb extends Template
         <div class=\"row\">
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Robe.jpeg') }}\" class=\"card-img-top\" alt=\"Robe années 50\">
+                    <img src=\"{{ asset('uploads/images/robe_chambre_homme.jpeg') }}\" class=\"card-img-top\" alt=\"Robe années 50\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Robe années 50</h5>
+                        <h5 class=\"card-title text-center\">Robe de chambre homme</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Veste.jpeg') }}\" class=\"card-img-top\" alt=\"Veste côtelée\">
+                    <img src=\"{{ asset('uploads/images/Robe-enfant.jpeg') }}\" class=\"card-img-top\" alt=\"Veste côtelée\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Veste côtelée</h5>
+                        <h5 class=\"card-title text-center\">Robe pour enfant</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Bob.jpeg') }}\" class=\"card-img-top\" alt=\"Bob rose\">
+                    <img src=\"{{ asset('uploads/images/Veste.jpeg') }}\" class=\"card-img-top\" alt=\"Bob rose\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Bob rose</h5>
+                        <h5 class=\"card-title text-center\">Veste en laine coloré</h5>
                     </div>
                 </div>
             </div>
             <div class=\"col-md-3 col-sm-6 mb-4\">
                 <div class=\"card\">
-                    <img src=\"{{ asset('uploads/creations/Sac.jpeg') }}\" class=\"card-img-top\" alt=\"Sac à main\">
+                    <img src=\"{{ asset('uploads/images/tee_enfant.jpeg') }}\" class=\"card-img-top\" alt=\"Sac à main\">
                     <div class=\"card-body\">
-                        <h5 class=\"card-title text-center\">Sac à main</h5>
+                        <h5 class=\"card-title text-center\">Tee shirt imprimé enfant</h5>
                     </div>
                 </div>
             </div>

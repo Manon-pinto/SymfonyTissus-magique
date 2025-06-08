@@ -21,28 +21,27 @@ class CreationsRepository extends ServiceEntityRepository
         parent::__construct($registry, Creations::class);
     }
 
-//    /**
-//     * @return Creations[] Returns an array of Creations objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('c.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * Trouve les créations selon les filtres publicCible et catégorie
+     *
+     * @param string|null $publicCible
+     * @param string|null $categorie
+     * @return Creations[]
+     */
+    public function findByFilters(?string $publicCible, ?string $categorie): array
+    {
+        $qb = $this->createQueryBuilder('c');
 
-//    public function findOneBySomeField($value): ?Creations
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+        if ($publicCible) {
+            $qb->andWhere('c.publicCible = :publicCible')
+               ->setParameter('publicCible', $publicCible);
+        }
+
+        if ($categorie) {
+            $qb->andWhere('c.categorie = :categorie')
+               ->setParameter('categorie', $categorie);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }
